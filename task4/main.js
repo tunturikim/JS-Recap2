@@ -1,7 +1,7 @@
 'use strict';
 
 function sortArray(array) {
-    const sortedArray = []
+    const sortedArray = [];
     for (const num of array) {
         sortedArray.push(num);
     }

@@ -1,82 +1,24 @@
-# JavaScript Project Template
- 
-A starter template for plain JavaScript projects (HTML + JS in the browser) with formatting and linting preconfigured:
- 
-- **EditorConfig**: consistent indentation, line endings and encoding across editors
-- **Prettier**: automatic code formatting
-- **ESLint**: finds errors and enforces coding conventions
-## Requirements
- 
-- [Node.js](https://nodejs.org/) (LTS version). Check with `node -v`. Node is installed once on your computer, not per project.
-- [Git](https://git-scm.com/)
-- Visual Studio Code with these extensions:
-  - Prettier - Code formatter
-  - ESLint
-  - EditorConfig for VS Code
-## Getting started
- 
-1. Click **Use this template** > **Create a new repository** on GitHub.
-2. Clone your new repository:
-```bash
-   git clone https://github.com/<username>/<repository>.git
-   cd <repository>
-```
- 
-3. Install dependencies (creates the `node_modules` folder, which is not stored in Git):
-```bash
-   npm install
-```
- 
-4. Open the folder in VS Code and start coding.
-Run `npm install` once after every fresh clone. You do not need to run it every time you open the project.
- 
-## VS Code settings
- 
-Open settings with `Ctrl + ,` and check:
- 
-- **Editor: Default Formatter** is set to **Prettier**
-- **Editor: Format On Save** is enabled
-## Project structure
- 
-```
-.
-├── .editorconfig        # Editor style rules
-├── .prettierrc.json     # Prettier configuration
-├── eslint.config.js     # ESLint configuration
-├── .gitignore
-├── package.json         # Project info and dependencies
-├── example.html         # Sample HTML page
-└── main.js              # Sample JavaScript file
-```
- 
-## Usage
- 
-Open `example.html` in a browser (or use the VS Code Live Server extension). JavaScript is loaded as a module:
- 
-```html
-<script type="module" src="main.js" defer></script>
-```
- 
-Output from `console.log()` appears in the browser developer tools console (`F12`).
- 
-For course assignments, put each assignment in its own folder with its own HTML and JS files, and include the assignment number in the file and folder names, for example `assignment1/assignment1.html` and `assignment1/assignment1.js`.
- 
-## Linting
- 
-Run ESLint manually on all files:
- 
-```bash
-npx eslint .
-```
- 
-Automatically fix what can be fixed:
- 
-```bash
-npx eslint . --fix
-```
- 
-## Notes
- 
-- `node_modules`, `.vscode`, `.idea` and `.DS_Store` are ignored by Git (see `.gitignore`).
-- If ESLint warnings do not show up in the editor, make sure `npm install` has been run in the project folder.
- 
+# JS Recap 2 – Arrays, Functions and Objects
+
+JavaScript assignments on arrays, loops, sorting functions and objects. Each assignment has its own folder with an HTML and a JS file.
+
+## Assignments
+
+| # | Folder | Topic | Points |
+|---|---|---|---|
+| 1 | [task1](task1/) | Array basics: `fruits` and `vegetables`, length, indexing, `push()` | 3p |
+| 2 | [task2](task2/) | `push()`, `includes()`, `pop()` and numeric sorting | 3p |
+| 3 | [task3](task3/) | Find even numbers from user input with `for...of` | 6p |
+| 4 | [task4](task4/) | `sortArray` function, ascending order | 2p |
+| 5 | [task5](task5/) | `sortArray` with `"asc"` / `"desc"` order | 3p |
+| 6 | [task6](task6/) | Movie rating tracker with an array of objects | 6p |
+
+## How to run
+
+1. Open an assignment's HTML file in a browser, e.g. `task1/task1.html`, or use the VS Code Live Server extension.
+2. Answer the prompts.
+3. Open the developer tools console (`F12`) to see the `console.log()` output. Assignments 3 and 6 also show their results on the page.
+
+## Setup
+
+Run `npm install` once after cloning to install ESLint and Prettier. Run `npx eslint .` to lint the files.

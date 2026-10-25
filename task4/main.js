@@ -1,7 +1,11 @@
 'use strict';
 
 function sortArray(array) {
-    return array.sort((a, b) => a - b);
+    const sortedArray = []
+    for (const num of array) {
+        sortedArray.push(num);
+    }
+    return sortedArray.sort((a, b) => a - b);
 }
 
 const array = [5, 2, 9, 1, 5, 6];

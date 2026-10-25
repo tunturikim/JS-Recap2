@@ -7,7 +7,12 @@ const movies = [];
 
 for (let num = 0; num < numberOfMovies; num++) {
   const title = prompt(`Enter the title of movie ${num + 1}: `);
-  const rating = parseFloat(prompt(`Enter the rating for "${title}": `));
+  let rating = parseFloat(prompt(`Enter the rating for "${title}" (1-5): `));
+  while (isNaN(rating) || rating < 1 || rating > 5) {
+    alert(`Invalid rating. Please enter a number between 1 and 5.`);
+    rating = parseFloat(prompt(`Enter the rating for "${title}" (1-5): `));
+  }
+
   const movie = {
     title: title,
     rating: rating,
@@ -27,4 +32,11 @@ for (const movie of movies) {
     movieListDiv.appendChild(movieTitle);
     movieListDiv.appendChild(movieRating);
     console.log(`Title: "${movie.title}", Rating: ${movie.rating}`);
+}
+if (movies.length > 0) {
+  const highestRatedMovie = movies[0];
+  const highestRatedMovieElement = document.createElement('h2');
+  highestRatedMovieElement.textContent = `Highest Rated Movie: "${highestRatedMovie.title}" with a rating of ${highestRatedMovie.rating}`;
+  movieListDiv.appendChild(highestRatedMovieElement);
+  console.log(`\nHighest Rated Movie: "${highestRatedMovie.title}" with a rating of ${highestRatedMovie.rating}`);
 }
